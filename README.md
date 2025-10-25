@@ -16,8 +16,7 @@ I created this project to demonstrate how you can:
 ## Prerequisites
 - Node.js (v18+ recommended)
 - npm
-- If you plan to use the LLM features, Azure OpenAI credentials (or adapt `src/lib/server/langgraph.ts` to another provider).
-- (Optional) Docker if you intend to use the database-related scripts.
+- An Azure OpenAI resource (or modify the code to use another OpenAI provider)
 
 ## Setup & Run (local)
 1. Install dependencies:
@@ -37,11 +36,6 @@ I created this project to demonstrate how you can:
 ## Build & Preview
 - Build for production: `npm run build`
 - Preview the build: `npm run preview`
-
-## Database / Drizzle (optional)
-This repo includes some DB-related npm scripts (drizzle-kit). See `package.json` for:
-- `db:start` — `docker compose up` (start DB services)
-- `db:push`, `db:generate`, `db:migrate`, `db:studio` — drizzle-kit commands
 
 ## Project structure (relevant files)
 - `src/lib/server/create-graph.ts` — Main workflow that invokes the LLM to generate nodes & relationships using `@langchain/langgraph`.
